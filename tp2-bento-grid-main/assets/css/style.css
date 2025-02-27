@@ -75,7 +75,7 @@ body {
 }
 @media (min-width: 800px) {
   body {
-    line-height: 1.75;
+    line-height: 1;
     font-size: 1.2rem;
   }
 }
@@ -91,22 +91,36 @@ h4 {
 /* AJUSTER LES VALEURS SELON VOTRE PROJET */
 
 h1 {
-  font-size:rem;
-}
 
+  font-size: 2.4rem;
+}
+@media (min-width: 600px) {
+  h1 {
+      
+      font-size: 3.2rem;
+  }
+}
 @media (min-width: 800px) {
   h1 {
-    font-size: 3rem;
+  
+      font-size: 4rem;
   }
 }
 
 h2 {
-  font-size: 1.5rem;
-}
 
+  font-size: 1.8rem;
+}
+@media (min-width: 600px) {
+  h2 {
+
+      font-size: 2rem;
+  }
+}
 @media (min-width: 800px) {
   h2 {
-    font-size: 1.8rem;
+  
+      font-size: 2.2rem;
   }
 }
 
@@ -149,11 +163,14 @@ h2 {
 .boite6 {
   background-color: hsl(0, 0%, 100%);
 }
-.boite7 {
+.boite7_div {
   background-color: hsl(31, 66%, 93%);
+margin: auto;
 }
-.boite8 {
+.boite8_div {
   background-color: hsl(39, 100%, 71%);
+  margin: auto;
+
 }
 
 @media (min-width: 600px) {
@@ -164,8 +181,8 @@ h2 {
     grid-gap: 20px;
     grid-template-areas:
       "g a a d"
-      "h b c d"
-      "h f e e";
+      "g b c d"
+      "g f e e";
   }
 
   .boite1 {
@@ -189,13 +206,17 @@ h2 {
   .boite6 {
     grid-area: f;
   }
-  .boite7 {
+  .boite7-8 {
     grid-area: g;
+    display: flex;
+    flex-direction: column;
+
   }
-  .boite8 {
-    grid-area: h;
-  }
+ 
+
 }
+
+
 
 .boites li {
   padding: 10px;
@@ -209,3 +230,23 @@ h2 {
   }
 }
 
+.boite1 img{
+  width: 50%;
+  }
+  
+.boite4 img{
+overflow: hidden;
+}
+.boite5{
+display: flex;
+align-items: center;
+}
+.boite5 img{
+width: 40%;
+height: auto; 
+}
+
+
+.boite7_texteItalic{
+  color: hsl(256, 67%, 59%);
+}
