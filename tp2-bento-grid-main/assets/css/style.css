@@ -62,7 +62,7 @@ body {
   font-style: normal;
 
   /* taille de police du texte sur l'écran étroit: 14px */
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   /* facteur multiplicateur de la taille de la police 1.375x16 = 22 */
   line-height: 1.375;
 }
@@ -92,7 +92,7 @@ h4 {
 
 h1 {
 
-  font-size: 2.4rem;
+  font-size: 3rem;
 }
 @media (min-width: 600px) {
   h1 {
@@ -109,7 +109,7 @@ h1 {
 
 h2 {
 
-  font-size: 1.8rem;
+  font-size: 3rem;
 }
 @media (min-width: 600px) {
   h2 {
@@ -134,9 +134,11 @@ h2 {
 }
 
 .boites {
-  margin: 0;
   padding: 0;
   list-style: none;
+  display: grid;
+  grid-template-columns: 1fr; 
+  grid-gap: 20px;
 }
 
 .boite1 {
@@ -146,38 +148,46 @@ h2 {
 }
 .boite2 {
   background-color: hsl(0, 0%, 100%);
+  padding: 1rem;
 }
 
 .boite3 {
   background-color: hsl(39, 100%, 71%);
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
 }
 
 .boite4 {
   background-color: hsl(254, 88%, 90%);
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
 }
 
 .boite5 {
   background-color: hsl(256, 67%, 59%);
   color: white;
+  padding: 1rem;
 }
 .boite6 {
   background-color: hsl(0, 0%, 100%);
+  padding: 1rem;
 }
 .boite7_div {
   background-color: hsl(31, 66%, 93%);
-margin: auto;
+  padding: 1rem;
 }
 .boite8_div {
   background-color: hsl(39, 100%, 71%);
-  margin: auto;
-
+  padding: 1rem;
 }
 
 @media (min-width: 600px) {
   .boites {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: minmax(300px, auto) minmax(100px, auto) minmax(100px, auto) minmax(200px auto);
     grid-gap: 20px;
     grid-template-areas:
       "g a a d"
@@ -210,32 +220,36 @@ margin: auto;
     grid-area: g;
     display: flex;
     flex-direction: column;
+    height: 100%;
+    gap: 2rem;
+  }
 
+  .boite7_div, .boite8_div {
+    flex: 1; 
+    border-radius: 5px;
+  }
+  
   }
  
 
+.boite4 p{
+  margin-top: 24rem;
 }
-
-
 
 .boites li {
-  padding: 10px;
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
-
-@media (min-width: 600px) {
-  .boites li {
-    margin-bottom: 10px;
-  }
+border-radius: 5px;
 }
 
 .boite1 img{
   width: 50%;
   }
+
+.boite3 img{
+  position: absolute;
+} 
   
 .boite4 img{
-overflow: hidden;
+position: absolute;
 }
 .boite5{
 display: flex;
@@ -246,7 +260,7 @@ width: 40%;
 height: auto; 
 }
 
-
 .boite7_texteItalic{
   color: hsl(256, 67%, 59%);
 }
+
